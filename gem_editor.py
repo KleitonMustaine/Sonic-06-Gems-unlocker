@@ -4,7 +4,7 @@ offsets = {
     0x5EC4: "Sonic Light Dash",
     0x5EC8: "Sonic Anti-Gravity",
     0x5ECC: "Sonic Bound Bracelet",
-    0x5ED0: "Sonic Unused Bracelet",
+    0x5ED0: "Sonic Unused Bracelet 'Homing Smash'",
     0x5ED4: "Sonic Green Gem",
     0x5ED8: "Sonic Red Gem",
     0x5EDC: "Sonic Blue Gem",

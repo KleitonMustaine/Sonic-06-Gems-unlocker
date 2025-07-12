@@ -10,17 +10,17 @@ class GemEditorApp:
         self.filename = None
         self.check_vars = {}
 
-        self.load_button = tk.Button(master, text="Abrir Arquivo .bin", command=self.load_file)
+        self.load_button = tk.Button(master, text="Open SonicNextSaveData.bin", command=self.load_file)
         self.load_button.pack(pady=10)
 
         self.check_frame = tk.Frame(master)
         self.check_frame.pack(padx=10, pady=10)
 
-        self.save_button = tk.Button(master, text="Salvar Alterações", command=self.save_file, state=tk.DISABLED)
+        self.save_button = tk.Button(master, text="Save Changes", command=self.save_file, state=tk.DISABLED)
         self.save_button.pack(pady=10)
 
     def load_file(self):
-        file = filedialog.askopenfilename(filetypes=[("Arquivos binários", "*.bin")])
+        file = filedialog.askopenfilename(filetypes=[("Binary Files", "*.bin")])
         if not file:
             return
         self.filename = file
@@ -43,7 +43,7 @@ class GemEditorApp:
             return
         changes = {name: (var.get() == 1) for name, var in self.check_vars.items()}
         output_file = write_gem_status(self.filename, changes)
-        messagebox.showinfo("Sucesso", f"Arquivo salvo como:\n{output_file}")
+        messagebox.showinfo("Success", f"File saved as:\n{output_file}")
 
 if __name__ == "__main__":
     root = tk.Tk()
